@@ -13,7 +13,7 @@ const Testimonial = () => {
     const testimonails = [
         {
             'img': imgOne,
-            'name': 'Diyanka Khairnar',
+            'name': 'Diya Thakur',
             'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
             'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
         },
@@ -31,7 +31,7 @@ const Testimonial = () => {
         },
         {
             'img': imgOne,
-            'name': 'Sidhika K',
+            'name': 'Sidhika Jain',
             'description' : 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts',
             'ratings':[<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>,<AiFillStar/>]
         }
