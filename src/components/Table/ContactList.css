@@ -1,0 +1,40 @@
+.contact-list-container {
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .contact-table th,
+  .contact-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .contact-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .contact-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .contact-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .contact-table td {
+    word-wrap: break-word;
+  }
+  
