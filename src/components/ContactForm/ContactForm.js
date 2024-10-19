@@ -3,7 +3,7 @@ import './ContactForm.scss';
 import icon from '../../assets/banner/icons/Calling.png';
 import axios from 'axios';
 
-// Helper function to get today's date in 'YYYY-MM-DD' format
+// Helper function to get today's date in 'YYYY-MM-DD' formatt  date formate to tje current date as the passion of the date is very being differnt 
 const getCurrentDate = () => {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, '0'); // Add leading zero for single-digit days
@@ -34,7 +34,7 @@ const ContactForm = () => {
     const timeSlots = {
         Monday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
         Tuesday: ['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
-        Wesnesday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Wednesday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
         Thursday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
         Friday:['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
         Saturday:['10:00 AM', '11:00 AM','6:00 PM','7:00 PM', '8:00 PM' , '9:00 PM'],
