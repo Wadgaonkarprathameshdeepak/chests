@@ -9,7 +9,7 @@ const ContactList = () => {
     // Fetch data from the backend
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/contact');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND}/api/contact`);
         setContacts(response.data); // Set the fetched data into state
       } catch (error) {
         console.error('Error fetching contacts:', error);
