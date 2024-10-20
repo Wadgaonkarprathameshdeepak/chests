@@ -53,7 +53,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND}/api/contact`,formData);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND}/contact`,formData);
             alert(response.data.msg);  // Success message
         } catch (error) {
             if (error.response && error.response.status === 400) {
