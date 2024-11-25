@@ -10,10 +10,7 @@ const BlogCard = ({blog}) => {
             <div className="blog-card">
                 <div className="blog-img">
                     <img src={img} alt="blog"/>
-                    <div className="date">
-                        <h6>23</h6>
-                        <p>Jan</p>
-                    </div>
+                   
                 </div>
                 <div className="blog-text">
                     <span><Link to="/">{category}</Link></span>

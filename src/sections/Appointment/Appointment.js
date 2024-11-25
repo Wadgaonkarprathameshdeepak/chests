@@ -28,7 +28,8 @@ const Appointment = () => {
                             <SectionTitle 
                             subTitle="BOOK APPOINTMENT"
                             title="Care at Our Chest Clinic is a Breath of Fresh Air"
-                            description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual"/>
+                            description="Take the first step toward better respiratory health by scheduling an appointment with our expert pulmonologist today. Whether you're experiencing symptoms or simply need a check-up, we’re here to provide compassionate and personalized care tailored to your needs.
+Book your appointment now and breathe easier with our specialized care."/>
 
                             <ContactForm />
                         </div>

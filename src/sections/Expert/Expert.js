@@ -14,7 +14,6 @@ const Expert = () => {
                             <SectionTitle 
                                 subTitle="EXPERTS IN CHEST"
                                 title="Top-Quality Chest Clinic Care, Provided by Leading Specialists in Seattle."
-                                description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts"
                             />
 
                             <ul>

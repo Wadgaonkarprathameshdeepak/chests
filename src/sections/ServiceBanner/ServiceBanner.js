@@ -13,7 +13,7 @@ const ServiceBanner = () => {
                             <div className="col-lg-5 col-md-6">
                                 <div className="service-banner-text" data-aos="fade-up" data-aos-duration="2000">
                                     <h2>CHEST DISEASES & INFECTION</h2>
-<p>Lorem</p>                                    <div className="theme-btn">
+<p>Chest infections and diseases can impact your overall health and well-being. From respiratory infections like pneumonia and bronchitis to chronic conditions such as asthma and COPD, our clinic provides expert diagnosis and treatment. Trust our specialist to guide you through personalized care to manage and treat chest-related health issues effectively.</p>                                    <div className="theme-btn">
                                         <Link to="/">Book an appointment</Link>
                                     </div>
                                 </div>

@@ -11,12 +11,12 @@ const Emergency = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6">
                         <div className="emergency-img">
-                            <img src={EmergencyImg} alt="Emergency" />
+                            <img src={EmergencyImg} alt="Emergency" className="responsive-image" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="emergency-text">
-                            <SectionTitle subTitle="Support Available for 24/7" title="Gentle, friendly treatment from our locally practice." description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."/>
+                            <SectionTitle subTitle="Support Available for 24/7" title="Gentle, friendly treatment from our locally practice."/>
 
                             <div className="theme-btn">
                                 <Link to='/'>Book an appointment</Link>

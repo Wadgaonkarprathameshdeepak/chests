@@ -113,3 +113,26 @@
         }
     }
 }
+
+/* styles.css */
+
+.responsive-image {
+    width: 80%;          /* Full width, allowing it to be responsive */
+    max-width: 200px;     /* Limits the image size to a maximum width */
+    height: auto;         /* Maintains aspect ratio */
+    display: block;       /* Centers the image if within a flex or block container */
+    margin: 0 auto;       /* Centers the image horizontally */
+}
+
+/* Media Query for larger screens to increase the size */
+@media (min-width: 768px) {
+    .responsive-image {
+        max-width: 500px; /* Increases max-width on larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-image {
+        max-width: 700px; /* Further increase on even larger screens */
+    }
+}

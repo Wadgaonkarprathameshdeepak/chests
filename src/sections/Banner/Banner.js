@@ -3,9 +3,9 @@ import './Banner.scss';
 import {Link} from 'react-router-dom';
 import icon from '../../assets/banner/icons/Calling.png';
 import bannerImg from '../../assets/banner/1.png';
-import doctorImg from '../../assets/banner/doctor.png';
+import doctorImg from '../../assets/banner/doctor.jpg';
 import bannerPattern from '../../assets/banner/pattern_02.png';
-import shapeOne from '../../assets/download.svg';
+//import shapeOne from '../../assets/download.svg';
 import shapeTwo from '../../assets/banner/vector_02.png';
 import shapeThree from '../../assets/banner/vector_03.png';
 import shapeFour from '../../assets/banner/pattern.png';
@@ -21,7 +21,6 @@ const Banner = () => {
                             <div className="col-lg-6">
                                 <div className="banner-text" data-aos="fade-up" data-aos-duration="2000">
                                     <h1>Your most trusted health partner</h1>
-                                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 
                                     <div className="banner-bottom">
                                         <div className="theme-btn">
@@ -48,10 +47,12 @@ const Banner = () => {
                                     </div>
                                     <div className='info-box'>
                                         <div className="info-img">
-                                            <img src={doctorImg} alt="doctor" />
+                                            <img src={doctorImg} alt="doctor" style={{ width: '80px', height: 'auto' }} />
                                         </div>
                                         <div className='info-text'>
-                                            <p>Dr. Vaibhav D. Pandharkar</p>
+                                            <p>Dr. Vaibhav D. Pandharkar<br></br>
+                                           <br></br> MBBS, DNB-Tuberculosis and Respiratory diseases/Pulmonary Medicine<br></br>
+                                                Diploma in Tuberculosis and Chest Diseases(DTCD) </p>
                                             <p><small></small></p>
                                         </div>
                                     </div>  
@@ -59,7 +60,7 @@ const Banner = () => {
                                     {/* Vector Shapes */}
                                     <div className="shapes">
                                         <div className="shpaess">
-                                        <img src={shapeOne} alt="shape" /></div>
+                                        </div>
                                         <img src={shapeTwo} alt="shape" />
                                         <img src={shapeThree} alt="shape" />
                                         <img src={shapeFour} alt="shape" />

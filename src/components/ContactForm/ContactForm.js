@@ -3,6 +3,20 @@ import './ContactForm.scss';
 import icon from '../../assets/banner/icons/Calling.png';
 import axios from 'axios';
 
+// Helper function to get today's date in 'YYYY-MM-DD' formatt  date formate to tje current date as the passion of the date is very being differnt 
+const getCurrentDate = () => {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0'); // Add leading zero for single-digit days
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+    const year = today.getFullYear();
+    return `${year}-${month}-${day}`;
+};
+const getDayOfWeek = (date) => {
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const selectedDate = new Date(date);
+    return dayNames[selectedDate.getDay()];
+};
+
 const ContactForm = () => {
     // Form data state
     const [formData, setFormData] = useState({
@@ -37,6 +51,20 @@ const ContactForm = () => {
             }
         }
     };
+
+     // Time slots mapped by days of the week
+     const timeSlots = {
+        Monday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Tuesday: ['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
+        Wednesday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Thursday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Friday:['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
+        Saturday:['10:00 AM', '11:00 AM','6:00 PM','7:00 PM', '8:00 PM' , '9:00 PM'],
+    };
+
+     // Get the current day of the week based on the selected date
+     const selectedDay = formData.date ? getDayOfWeek(formData.date) : '';
+
     
     return (
         <form onSubmit={handleSubmit}>
@@ -83,6 +111,7 @@ const ContactForm = () => {
                             name="date"
                             value={formData.date}
                             onChange={handleChange}
+                            min={getCurrentDate()}  // Prevent past dates
                             required 
                         />
                     </div>
@@ -97,14 +126,17 @@ const ContactForm = () => {
                             value={formData.dayTime}
                             onChange={handleChange}
                             required
+                            disabled={!selectedDay} // Disable if no valid date is selected
                         >
                             <option>Select Day & Time</option>
-                            <option value="monday-6pm">Monday 6:00 PM</option>
-                            <option value="monday-7pm">Monday 7:00 PM</option>
-                            <option value="monday-8pm">Monday 8:00 PM</option>
-                            <option value="tuesday-9am">Tuesday 9:00 AM</option>
-                            <option value="tuesday-10am">Tuesday 10:00 AM</option>
-                            <option value="tuesday-11am">Tuesday 11:00 AM</option>
+                            {selectedDay && timeSlots[selectedDay] 
+                                ? timeSlots[selectedDay].map((time, index) => (
+                                    <option key={index} value={`${selectedDay}-${time}`}>
+                                        {selectedDay} {time}
+                                    </option>
+                                  ))
+                                : <option>No time slots available</option>
+                            }
                         </select>
                     </div>
                 </div>

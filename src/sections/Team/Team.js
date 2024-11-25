@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.scss';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import imgOne from '../../assets/about/team/1.png';
+import imgOne from '../../assets/about/team/1.jpeg';
 
 
 const Team = () => {
@@ -21,14 +21,13 @@ const Team = () => {
                 <div className="row">
                     <div className="col-lg-7">
                         <SectionTitle
-                            subTitle="Meet our Team"
-                            title="Get to know the Chest Specialist
-                             Team"
+                            subTitle="Meet Our Specialist"
+                            title="Get to know our Chest Specialist"
                         />
                     </div>
 
                     <div className="col-lg-5">
-                        <p className='pt-5'>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <p className='pt-5'>Get to know our dedicated chest specialist, committed to providing personalized, high-quality respiratory care. With expertise and a compassionate approach, our doctor is here to support your journey to better lung health and well-being.</p>
 
                     </div>
                 </div>

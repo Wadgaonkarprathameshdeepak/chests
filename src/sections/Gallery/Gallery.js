@@ -1,7 +1,7 @@
 import React from 'react';
 import './Gallery.scss';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import imgOne from '../../assets/servicePage/gallery/1.png';
+import imgOne from '../../assets/1.png';
 import imgTwo from '../../assets/servicePage/gallery/2.png';
 import imgThree from '../../assets/servicePage/gallery/3.png';
 import imgFour from '../../assets/servicePage/gallery/4.png';
@@ -14,8 +14,8 @@ const Gallery = () => {
             <div className="container">
                 <SectionTitle 
                     subTitle="Gallery"
-                    title="Some proof about our services for you"
-                    description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+                    title="Images of the Clinic Environment"
+                    description="Take a glimpse of the comfortable and welcoming atmosphere of our clinic. Designed with your health and comfort in mind, our clinic provides a calm, hygienic, and modern setting for all your respiratory care needs. Our team ensures every visit is a pleasant experience in a space equipped with the latest medical technology."
                 />
                 <div className="row">
                     <div className="col-md-5 col-sm-6">

@@ -12,7 +12,7 @@ const Contactus = () => {
                 <Navbar />
                 <SectionTitle 
                     title="Contact Us"
-                    description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+                    description="We’re here to help with all your respiratory health needs. Feel free to reach out for appointments, inquiries, or more information about our services. Our friendly staff is ready to assist you."
                 />
             </section>
             <section className='contact-form-area' data-aos="fade-up" data-aos-duration="2000">

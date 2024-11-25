@@ -9,12 +9,19 @@ const Safety = () => {
                 <SectionTitle 
                     subTitle="Safety"
                     title="We put the safety first"
-                    description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+                    description="Your safety is our foremost concern. We maintain rigorous hygiene standards, use advanced diagnostic tools, and follow best practices in respiratory care to ensure a safe and comfortable environment for every patient. Trust us to prioritize your well-being at every step."
                 />
-
-                <div className="safety-video ratio ratio-16x9">
-                    <iframe src="https://youtu.be/Epit6DSq_ww?si=u54FcP7oujV0mtKm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                
+                <div className="safety-video">
+                    {/* Use Instagram's official embed code here */}
+                    <iframe
+                        src="https://www.instagram.com/p/CROX-DThzRd/embed"
+                        title="Instagram video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="ratio ratio-16x9"
+                    ></iframe>
                 </div>
             </div>
         </section>
