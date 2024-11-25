@@ -3,20 +3,6 @@ import './ContactForm.scss';
 import icon from '../../assets/banner/icons/Calling.png';
 import axios from 'axios';
 
-// Helper function to get today's date in 'YYYY-MM-DD' formatt  date formate to tje current date as the passion of the date is very being differnt 
-const getCurrentDate = () => {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, '0'); // Add leading zero for single-digit days
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is zero-based
-    const year = today.getFullYear();
-    return `${year}-${month}-${day}`;
-};
-const getDayOfWeek = (date) => {
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const selectedDate = new Date(date);
-    return dayNames[selectedDate.getDay()];
-};
-
 const ContactForm = () => {
     // Form data state
     const [formData, setFormData] = useState({
@@ -27,6 +13,16 @@ const ContactForm = () => {
         service: '',
         message: ''
     });
+
+    // Time slots mapped by days of the week
+    const timeSlots = {
+        Monday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Tuesday: ['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
+        Wednesday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Thursday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
+        Friday:['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
+        Saturday:['10:00 AM', '11:00 AM','6:00 PM','7:00 PM', '8:00 PM' , '9:00 PM'],
+    };
 
     // Handle form input change
     const handleChange = (e) => {
@@ -41,7 +37,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/contact', formData);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND}/contact`,formData);
             alert(response.data.msg);  // Success message
         } catch (error) {
             if (error.response && error.response.status === 400) {
@@ -51,20 +47,6 @@ const ContactForm = () => {
             }
         }
     };
-
-     // Time slots mapped by days of the week
-     const timeSlots = {
-        Monday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
-        Tuesday: ['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
-        Wednesday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
-        Thursday: ['6:00 PM', '7:00 PM', '8:00 PM' , '9:00 PM'],
-        Friday:['10:00 AM', '11:00 AM','7:00 PM', '8:00 PM' , '9:00 PM'],
-        Saturday:['10:00 AM', '11:00 AM','6:00 PM','7:00 PM', '8:00 PM' , '9:00 PM'],
-    };
-
-     // Get the current day of the week based on the selected date
-     const selectedDay = formData.date ? getDayOfWeek(formData.date) : '';
-
     
     return (
         <form onSubmit={handleSubmit}>

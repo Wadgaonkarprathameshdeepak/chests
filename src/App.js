@@ -7,6 +7,8 @@ import BlogsPage from './pages/BlogsPage';
 import SingleBlog from './pages/SingleBlog/SingleBlog';
 import Contactus from './pages/Contact/Contactus';
 import ContactList from './components/Table/ContactList';
+import AdminLoginForm from './components/Admin/Admin'; // Ensure the path is correct
+
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
       <Route path="/blog/:url" element={<SingleBlog />} />
       <Route path="/contact" element={<Contactus />} />
       <Route path="/contactList" element={<ContactList />} />
+      <Route path="/" element={<AdminLoginForm />} />
 
+      
     </Routes>
   );
 }
